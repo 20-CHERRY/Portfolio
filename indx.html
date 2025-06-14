@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sai Sree Charan | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-container">
+      <div class="site-title heading-font">Sai Sree Charan</div>
+      <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="dark-toggle" id="modeToggle" onclick="toggleDarkMode()">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="profile-container">
+      <div class="profile-text">
+        <div class="title_main">
+          <h1 class="title_static heading-font">I am a</h1>
+          <h1 class="title_dynamic heading-font">
+            <span class="typing">Developer & Programmer</span>
+          </h1>
+          <p class="desc">UI/UX | Python</p>
+        </div>
+        <p class="desc">
+          A passionate fresher with a strong interest in full-stack development, problem-solving, machine learning, and building user-friendly web applications.
+        </p>
+      </div>
+      <img src="https://i.pinimg.com/736x/91/77/97/91779771e0c323b769b5468319754d3a.jpg" alt="Profile Picture" class="profile-pic circle-animate" />
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+      <h2 class="heading-font">About Me</h2>
+      <br>
+      <div class="about-section">
+        <div class="about-card">
+          <h2 class="about-heading">🎓 Education</h2>
+          <p>
+            Completed my B.Tech in <strong>Computer Science and Engineering (AI & DS)</strong> at <strong>Vel Tech University</strong>. Built a strong foundation in programming, data structures, algorithms, and participated in technical fests and hackathons.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h2 class="about-heading">💡 Interests</h2>
+          <p>
+            I’m deeply passionate about <strong>Full-Stack Web Development</strong> and love working on:<br>
+            • Responsive UI/UX design<br>
+            • Backend logic & API development<br>
+            • Integrating AI/ML into smart web solutions
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h2 class="about-heading">🎯 Hobbies</h2>
+          <p>
+            Outside of coding, I enjoy:<br>
+            • 🎮 Competitive multiplayer gaming<br>
+            • 📚 Reading tech blogs and productivity books<br>
+            • 🎧 Listening to lo-fi music & tech/startup podcasts<br>
+            • 🛠️ Building creative mini-projects
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <h2 class="heading-font">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>
+            Developed a responsive personal portfolio using HTML, CSS, and JavaScript, showcasing my skills and projects with clean design and intuitive navigation.
+          </p>
+          <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Todo App</h3>
+          <p>
+            Created a minimalist todo list app for efficient task management using JavaScript and styled with CSS. Designed for smooth user interaction and responsive design across devices.
+          </p>
+          <a href="https://todoxx.ccbp.tech" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <h2 class="heading-font">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item zoom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML"></div>
+        <div class="skill-item zoom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS"></div>
+        <div class="skill-item zoom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" title="Bootstrap"></div>
+        <div class="skill-item zoom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript"></div>
+        <div class="skill-item zoom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python"></div>
+        <div class="skill-item zoom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js" title="React.js"></div>
+        <div class="skill-item zoom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js"></div>
+        <div class="skill-item zoom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git"></div>
+        <div class="skill-item zoom"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" title="SQLite"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container contact">
+      <h2 class="heading-font">Contact</h2>
+      <p>Email: <a href="mailto:saisreecharan@gmail.com">saisreecharan@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/saisreecharan" target="_blank" rel="noopener noreferrer">linkedin.com/in/saisreecharan</a></p>
+      <p>GitHub: <a href="https://github.com/saisreecharan" target="_blank" rel="noopener noreferrer">github.com/saisreecharan</a></p>
+    </section>
+
+    <!-- Floating Contact Button -->
+    <button class="floating-contact" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+      Contact Me
+    </button>
+
+
+    <button id="scrollToTopBtn" title="Go to top">⬆</button>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sai_Sree_Charan. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

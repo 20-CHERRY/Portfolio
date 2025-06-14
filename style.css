@@ -1,0 +1,533 @@
+/* === Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* === Base Styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s, color 0.3s;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === Section Styles === */
+section {
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.05);
+}
+
+/* === Dark Mode Base === */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode a {
+  color: #90caf9;
+}
+
+/* === Header/Navbar === */
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Alumni Sans SC", sans-serif;
+  background: linear-gradient(to right, #c0ad8f, rgb(201, 173, 14));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  cursor: default;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 6px rgba(252, 163, 17, 0.6);
+  padding: 10px;
+}
+
+.site-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(to right, #f5f4f4, rgb(179, 162, 68));
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(252, 163, 17, 0.6);
+  transition: width 0.4s ease-in-out;
+}
+
+.site-title:hover {
+  transform: scale(1.1);
+}
+
+.site-title:hover::after {
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+#nav-links li a {
+  color: white;
+  transition: color 0.3s, transform 0.3s ease;
+  display: inline-block;
+}
+
+#nav-links li a:hover {
+  color: #fca311;
+  transform: scale(1.1);
+}
+
+.navbar .hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* === Responsive Nav === */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    right: 1rem;
+    top: 60px;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar .hamburger {
+    display: block;
+  }
+}
+
+/* === Profile Section === */
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.4);
+}
+
+.profile-text {
+  max-width: 500px;
+}
+
+/* === Typing Section === */
+.title_main {
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+  padding: 2rem 1rem;
+}
+
+.title_static {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #6c757d;
+}
+
+.title_dynamic {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #e9d627;
+  min-height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s steps(24) infinite, erase 5s steps(24) 5s infinite;
+  border-right: 2px solid;
+}
+
+.cursor {
+  font-weight: bold;
+  animation: blink 0.7s steps(1) infinite;
+  margin-left: 2px;
+}
+
+@keyframes typing {
+  0% { width: 0ch; }
+  50% { width: 24ch; }
+  100% { width: 0ch; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.desc {
+  font-size: 1rem;
+  color: #6c757d;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  margin-top: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.desc:hover {
+  border-color: #dbe0c2;
+}
+
+/* === About Section === */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  flex: 1 1 300px;
+  margin: auto;
+}
+
+.about-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-card h2.about-heading {
+  font-size: 1.5rem;
+  color: #e9e50e;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.about-card h2.about-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 3px;
+  width: 0%;
+  background-color: #747357;
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+}
+
+.about-card:hover h2.about-heading::after {
+  width: 100%;
+}
+
+.about-card p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === Skills Section === */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.skill-item img:hover {
+  transform: scale(1.5);
+}
+
+/* === Projects Section === */
+.projects-section {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #9c9294;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #DC143C;
+}
+
+.project-card p {
+  color: #555;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.project-card a {
+  color: #DC143C;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #dacc0f;
+}
+
+/* === Contact Section === */
+.contact a {
+  color: #007bff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact a:hover {
+  transform: scale(1.05);
+  color: #fca311;
+}
+
+/* === Floating Button === */
+.floating-contact {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+.floating-contact:hover {
+  background-color: #0056b3;
+}
+
+/* === click to top === */
+/* Scroll To Top Button fixed at right middle */
+#scrollToTopBtn {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background-color: rgba(0, 123, 255, 0.7); /* semi-transparent blue */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: none; /* Hidden initially */
+  z-index: 1000;
+  transition: background 0.3s, transform 0.3s, opacity 0.3s;
+  opacity: 0.7; /* Slight transparency */
+}
+
+#scrollToTopBtn:hover {
+  background-color: rgba(0, 86, 179, 0.9); /* darker, less transparent */
+  transform: translateY(-50%) scale(1.1);
+  opacity: 1; /* fully opaque on hover */
+}
+
+
+/* Dark mode styling */
+.dark-mode #scrollToTopBtn {
+  background-color: #fca311;
+  color: black;
+}
+
+.dark-mode #scrollToTopBtn:hover {
+  background-color: #e69500;
+}
+
+
+
+
+/* === Footer === */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* === Dark Mode Overrides === */
+.dark-mode .about-section {
+  background: #1e1e1e;
+}
+
+.dark-mode .about-card {
+  background: #2c2c2c;
+  color: #eee;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .about-card p {
+  color: #ccc;
+}
+
+.dark-mode .about-card h2.about-heading {
+  color: #f0e130;
+}
+
+.dark-mode .about-card h2.about-heading::after {
+  background-color: #e0d500;
+}
+
+.dark-mode .skills-grid {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .skill-item img {
+  filter: brightness(0.9);
+}
+
+.dark-mode .projects-section {
+  background-color: #121212;
+}
+
+.dark-mode .projects-section h2 {
+  color: #ffffff;
+}
+
+.dark-mode .project-card {
+  background-color: #242424;
+  border-left: 4px solid #666;
+}
+
+.dark-mode .project-card h3 {
+  color: #e9d627;
+}
+
+.dark-mode .project-card p {
+  color: #ccc;
+}
+
+.dark-mode .project-card a {
+  color: #fca311;
+}
+
+.dark-mode .project-card a:hover {
+  color: #e9d627;
+}
+
+.dark-mode .contact a {
+  color: #fca311;
+}
+
+.dark-mode .contact a:hover {
+  color: #dacc0f;
+}
+
+.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #ddd;
+}
+
+.dark-mode .floating-contact {
+  background-color: #fca311;
+  color: black;
+}
+
+.dark-mode .floating-contact:hover {
+  background-color: #e69500;
+}
